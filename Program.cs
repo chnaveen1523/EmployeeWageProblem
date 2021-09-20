@@ -1,16 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EmployeeWageProblem
+namespace EmployeeWage.cs
 {
-    class Program
+    class EmployeeWage
     {
         static void Main(string[] args)
         {
-            Welcome to the EmployeeWage 
+            //UC1 Employee
+            //Constants
+
+            int IS_FULL_TIME = 1;
+
+            //predefined random class for generating random value
+            Random random = new Random();
+
+            //next method() 0-intial value , 2-number of elements from 0
+            int empCheck = random.Next(0, 2);
+
+            //selection statement
+            if (empCheck == IS_FULL_TIME)
+            {
+                Console.WriteLine("Employee is present");
+            }
+            else
+            {
+                Console.WriteLine("Employee is absent");
+            }
+
+
         }
     }
 }
