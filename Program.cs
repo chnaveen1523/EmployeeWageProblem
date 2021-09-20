@@ -1,33 +1,40 @@
 ﻿using System;
 
-namespace EmployeeWage.cs
+namespace EmployeeWageCompute_CS
 {
-    class EmployeeWage
+    class EmployeeWageCompute
     {
         static void Main(string[] args)
         {
-            //UC1 Employee
+            //UC2 Daily Employee Wage Calculation
+
             //Constants
-
             int IS_FULL_TIME = 1;
+            int EMP_RATE_PER_HOUR = 20;
+            int empHrs = 0;
+            int empWage = 0;
 
-            //predefined random class for generating random value
+            //Predefined random class for generating random values
             Random random = new Random();
 
-            //next method() 0-intial value , 2-number of elements from 0
+            //Next method() 0-initial value,2-number of element from 0
             int empCheck = random.Next(0, 2);
+            Console.WriteLine("Checking employee status" + empCheck);
 
-            //selection statement
+            //Selection statement
             if (empCheck == IS_FULL_TIME)
             {
                 Console.WriteLine("Employee is present");
+                empHrs = 8;
             }
             else
             {
                 Console.WriteLine("Employee is absent");
+                empHrs = 0;
             }
-
-
+            empWage = EMP_RATE_PER_HOUR * empHrs;
+            Console.WriteLine("Daily employee wage is" + empWage);
+            Console.ReadLine();
         }
     }
 }
